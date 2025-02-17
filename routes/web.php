@@ -19,22 +19,6 @@ use App\Http\Controllers\PhotoController;
 |
 */
 
-// Route::get('/', function () {
-//     return 'Selamat Datang';
-// });
-
-// Route::get('/about', function () {
-//     return 'Nama: Kayla Rachmaudina, NIM: 2341760103';
-// });
-
-// Route::get('/', [PageController::class, 'index']);
-
-// Route::get('/about', [PageController::class, 'about']);
-
-// Route::get('/articles/{id}', [PageController::class, 'articles']);
-
-// Route::get('/hello', [WelcomeController::class, 'hello']);
-
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'about']);
 Route::get('/article/{id}', [ArticleController::class, 'article']);
@@ -52,10 +36,6 @@ Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
     return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
 });
 
-// Route::get('/articles/{id}', function ($id) {
-//     return 'Halaman Artikel dengan ID ' . $id;
-// });
-
 Route::get('/user/{name?}', function ($name = null) {
     return 'Nama saya ' . $name;
 });
@@ -67,3 +47,5 @@ Route::resource('photos', PhotoController::class)->only([
 Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
