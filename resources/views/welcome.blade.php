@@ -6,7 +6,8 @@
         <title>PWL 2024</title>
     </head>
     <body class="antialiased">
-        <h2>Pemograman Web Lanjut 2024</h2>
-        <h3>Semangat Belajar Laravel</h3>
+        <!-- <h2>Pemograman Web Lanjut 2024</h2>
+        <h3>Semangat Belajar Laravel</h3> -->
+        Selamat datang
     </body>
 </html>
